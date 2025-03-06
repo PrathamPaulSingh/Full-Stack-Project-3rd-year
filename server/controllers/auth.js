@@ -1,6 +1,9 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+
 const User = require('../models/user_model'); // Sequelize model
+
+
 const CLIENT_SECRET_KEY = process.env.CLIENT_SECRET_KEY;
 
 // Register
