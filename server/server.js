@@ -2,6 +2,7 @@ const express = require("express");
 require('dotenv').config();
 const sequelize = require("./database"); // Import Sequelize connection
 const petRouter = require('./routes/allpets');
+const shelterAdminRouter = require('./routes/shelterAdmin')
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use("/api/pets" , petRouter);
+app.use("/api/pets" , petRouter);
+app.use("/api/shelterAdmin" , shelterAdminRouter);
 
 app.listen(PORT,()=>{
     console.log(`Server is now running on port ${PORT}`)
