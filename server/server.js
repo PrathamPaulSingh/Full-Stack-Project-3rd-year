@@ -21,7 +21,6 @@ app.use(express.json());
 
 app.use("/api/auth" , authRouter);
 app.use("/api/pets" , petRouter);
-app.use("/api/pets" , petRouter);
 app.use("/api/shelterAdmin" , shelterAdminRouter);
 
 app.listen(PORT,()=>{

@@ -1,5 +1,5 @@
-const Applications = require('../models/adoptionForm.model'); // Sequelize model
-const User = require('../models/User'); // Sequelize model
+const Applications = require('../models/adoptionform'); // Sequelize model
+const User = require('../models/user_model'); // Sequelize model
 
 const viewApplications = async (req, res) => {
     try {
