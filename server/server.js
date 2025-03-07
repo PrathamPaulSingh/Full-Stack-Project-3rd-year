@@ -9,7 +9,7 @@ const shelterAdminRouter = require('./routes/shelterAdmin')
 const app = express();
 app.use(express.json());
 
-// Sync Database and Create Tables
+// Sync Database and Create Tables automatically
 sequelize.sync({ force: false }) // Set force: true to reset tables
   .then(() => console.log("Database synced"))
   .catch((err) => console.error("Error syncing database:", err));

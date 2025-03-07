@@ -17,8 +17,8 @@ const registerUser = async (req, res) => {
         success: false,
         message: 'User Already exists with the same email! Please try again',
       });
-
     const hashPassword = await bcrypt.hash(password, 12);
+  
     const newUser = await User.create({
       userName,
       email,
@@ -51,6 +51,7 @@ const loginUser = async (req, res) => {
       });
 
     const checkPasswordMatch = await bcrypt.compare(password, checkUser.password);
+    
     if (!checkPasswordMatch)
       return res.json({
         success: false,
